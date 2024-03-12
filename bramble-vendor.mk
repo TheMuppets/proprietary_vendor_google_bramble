@@ -71,7 +71,10 @@ PRODUCT_COPY_FILES += \
     vendor/google/bramble/proprietary/system_ext/lib64/vendor.qti.imsrtpservice@3.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.imsrtpservice@3.0.so \
     vendor/google/bramble/proprietary/system_ext/lib64/vendor.qti.imsrtpservice@3.1.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/vendor.qti.imsrtpservice@3.1.so \
     vendor/google/bramble/proprietary/system_ext/priv-app/EuiccSupportPixel/P20_Mini-Applet_dsem.apdu:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/P20_Mini-Applet_dsem.apdu \
-    vendor/google/bramble/proprietary/system_ext/priv-app/EuiccSupportPixel/esim-full-v1.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/esim-full-v1.img
+    vendor/google/bramble/proprietary/system_ext/priv-app/EuiccSupportPixel/esim-full-v1.img:$(TARGET_COPY_OUT_SYSTEM_EXT)/priv-app/EuiccSupportPixel/esim-full-v1.img \
+    vendor/google/bramble/proprietary/vendor/bin/hw/vendor.google.wifi_ext-service-vendor:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.google.wifi_ext-service-vendor \
+    vendor/google/bramble/proprietary/vendor/etc/init/vendor.google.wifi_ext-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.google.wifi_ext-service.rc \
+    vendor/google/bramble/proprietary/vendor/lib64/vendor.google.wifi_ext-V3-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.wifi_ext-V3-ndk.so
 
 PRODUCT_PACKAGES += \
     PixelCameraServicesBramble \
@@ -128,7 +131,8 @@ PRODUCT_PACKAGES += \
     com.android.hotwordenrollment.common.util \
     com.google.android.camera.extensions \
     google-ril \
-    qcrilhook
+    qcrilhook \
+    manifest_wifi_ext_aidl
 PRODUCT_COPY_FILES += \
     vendor/google/bramble/proprietary/product/etc/CarrierSettings/1and1_de.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/1and1_de.pb \
     vendor/google/bramble/proprietary/product/etc/CarrierSettings/2degrees_nz.pb:$(TARGET_COPY_OUT_PRODUCT)/etc/CarrierSettings/2degrees_nz.pb \
@@ -424,7 +428,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/bramble/proprietary/vendor/bin/hw/vendor.display.color@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.display.color@1.0-service \
     vendor/google/bramble/proprietary/vendor/bin/hw/vendor.google.google_battery-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.google.google_battery-service \
     vendor/google/bramble/proprietary/vendor/bin/hw/vendor.google.radioext@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.google.radioext@1.0-service \
-    vendor/google/bramble/proprietary/vendor/bin/hw/vendor.google.wifi_ext-service-vendor:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.google.wifi_ext-service-vendor \
     vendor/google/bramble/proprietary/vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.qseecom@1.0-service \
     vendor/google/bramble/proprietary/vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service \
     vendor/google/bramble/proprietary/vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti \
@@ -700,7 +703,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/bramble/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
     vendor/google/bramble/proprietary/vendor/etc/init/vendor.google.google_battery-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.google.google_battery-default.rc \
     vendor/google/bramble/proprietary/vendor/etc/init/vendor.google.radioext@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.google.radioext@1.0-service.rc \
-    vendor/google/bramble/proprietary/vendor/etc/init/vendor.google.wifi_ext-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.google.wifi_ext-service.rc \
     vendor/google/bramble/proprietary/vendor/etc/init/vendor.qti.adsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-service.rc \
     vendor/google/bramble/proprietary/vendor/etc/init/vendor.qti.cdsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.cdsprpc-service.rc \
     vendor/google/bramble/proprietary/vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc \
@@ -1890,7 +1892,6 @@ PRODUCT_COPY_FILES += \
     vendor/google/bramble/proprietary/vendor/lib64/vendor.google.radioext@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.radioext@1.1.so \
     vendor/google/bramble/proprietary/vendor/lib64/vendor.google.radioext@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.radioext@1.2.so \
     vendor/google/bramble/proprietary/vendor/lib64/vendor.google.radioext@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.radioext@1.3.so \
-    vendor/google/bramble/proprietary/vendor/lib64/vendor.google.wifi_ext-V1-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.wifi_ext-V1-ndk.so \
     vendor/google/bramble/proprietary/vendor/lib64/vendor.google.wifi_ext@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.google.wifi_ext@1.0.so \
     vendor/google/bramble/proprietary/vendor/lib64/vendor.qti.data.factory@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.factory@2.0.so \
     vendor/google/bramble/proprietary/vendor/lib64/vendor.qti.data.factory@2.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.data.factory@2.1.so \
@@ -2163,6 +2164,5 @@ PRODUCT_PACKAGES += \
     c2_manifest_vendor \
     manifest_android.hardware.drm-service.widevine-v17 \
     manifest_input.processor-service \
-    manifest_wifi_ext_aidl \
     rebootescrow-citadel \
     vendor.google.google_battery-default
